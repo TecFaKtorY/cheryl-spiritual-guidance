@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -182,6 +183,30 @@
     footer {
       background: #f7f2ff; padding: 18px; text-align:center; color:#555; border-top:1px solid #eee; margin-top: 10px;
     }
+    
+    /* FORM CONSENT NOTICE */
+.form-consent {
+  background: #faf5ff;
+  border-left: 4px solid #6a0dad;
+  padding: 14px 16px;
+  border-radius: 8px;
+  margin-top: 14px;
+  font-size: 0.95rem;
+  color: #333;
+}
+
+.form-consent ul {
+  margin: 8px 0 8px 20px;
+}
+
+.form-consent li {
+  margin-bottom: 6px;
+}
+
+.form-consent .no-payment {
+  margin-top: 8px;
+  color: #6a0dad;
+}
 
     /* Back to top */
     #backToTop {
@@ -204,6 +229,40 @@
       header.hero p { font-size: 1.05rem; }
       .service-box img { height:140px; }
     }
+    
+    /* CHAT PROOF */
+#chat-proof {
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.04);
+}
+
+.chat-proof-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 16px;
+  margin-top: 18px;
+}
+
+.chat-proof-grid img {
+  width: 100%;
+  border-radius: 10px;
+  box-shadow: 0 8px 22px rgba(0,0,0,0.08);
+  cursor: pointer;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.chat-proof-grid img:hover {
+  transform: scale(1.02);
+  box-shadow: 0 14px 32px rgba(0,0,0,0.12);
+}
+
+.chat-proof-note {
+  text-align: center;
+  font-size: 0.85rem;
+  color: #666;
+  margin-top: 12px;
+}
   </style>
 </head>
 <body>
@@ -217,6 +276,7 @@
         <a href="#about">About</a>
         <a href="#services">Services</a>
         <a href="#booking">Request Reading</a>
+        <a href="#chat-proof">Testimonial</a>
         <a href="#contact">Contact</a>
       </div>
 
@@ -293,44 +353,23 @@
 
     <!-- BOOKING / FORMS -->
     <section id="booking" aria-labelledby="booking-heading">
-      <h2 id="booking-heading">🌟 Psychic Reading - $50</h2>
-      <p class="lead">Enter your details below to receive your Psychic reading within 24–48 hours.</p>
-
-      <!-- FREE READING -->
-      <div class="form-card">
-        <form name="spiritual-requests" method="POST" data-netlify="true" netlify>
-          <input type="hidden" name="form-name" value="spiritual-requests">
-          <input type="hidden" name="session_type" value="Psychic Reading">
-          <label for="name-free">Full Name</label>
-          <input id="name-free" type="text" name="name" required>
-
-          <label for="whatsapp-free">WhatsApp Number</label>
-          <input id="whatsapp-free" type="text" name="whatsapp" required>
-
-          <label for="email-free">Email Address</label>
-          <input id="email-free" type="email" name="email" required>
-
-          <label for="message-free">Message</label>
-          <textarea id="message-free" name="message" rows="5" placeholder="Describe what you want to know or details you'd like me to focus on..." required></textarea>
-
-          <button class="submit-btn" type="submit">📩 Submit</button>
-        </form>
-      </div>
-
+      
+  <h2>Note:</h2>
+    <p>Make sure to read and understand the <a href="#consent">form consent</a> below before proceeding to fill the form.</p>
       <!-- LOVE -->
       <h2 style="margin-top:18px;">❤️ Get Ex BACK SPELL & Relationship Guidance - $250</h2>
       <div class="form-card">
         <form name="spiritual-requests" method="POST" data-netlify="true" netlify>
           <input type="hidden" name="form-name" value="spiritual-requests">
           <input type="hidden" name="session_type" value="Love & Relationship Guidance">
-          <label>Full Name</label>
+          <label>Full Name *</label>
           <input type="text" name="name" required>
-          <label>WhatsApp Number</label>
+          <label>Phone Number *</label>
           <input type="text" name="whatsapp" required>
           <label>Email Address</label>
           <input type="email" name="email" required>
-          <label>Message</label>
-          <textarea name="message" rows="4" placeholder="Share names and details of your situation or person..." required></textarea>
+          <label>Message *</label>
+          <textarea name="message" rows="4" placeholder="Share your date of birth, Ex's names and details of the situation or person..." required></textarea>
           <button class="submit-btn" type="submit">📩 Submit</button>
         </form>
       </div>
@@ -341,13 +380,13 @@
         <form name="spiritual-requests" method="POST" data-netlify="true" netlify>
           <input type="hidden" name="form-name" value="spiritual-requests">
           <input type="hidden" name="session_type" value="Wealth & Prosperity Guidance">
-          <label>Full Name</label>
+          <label>Full Name *</label>
           <input type="text" name="name" required>
-          <label>WhatsApp Number</label>
+          <label>Phone Number *</label>
           <input type="text" name="whatsapp" required>
           <label>Email Address</label>
           <input type="email" name="email" required>
-          <label>Message</label>
+          <label>Message *</label>
           <textarea name="message" rows="4" placeholder="Describe your current financial or business goals..." required></textarea>
           <button class="submit-btn" type="submit">📩 Submit</button>
         </form>
@@ -359,13 +398,13 @@
         <form name="spiritual-requests" method="POST" data-netlify="true" netlify>
           <input type="hidden" name="form-name" value="spiritual-requests">
           <input type="hidden" name="session_type" value="Energy Cleansing & Protection">
-          <label>Full Name</label>
+          <label>Full Name *</label>
           <input type="text" name="name" required>
-          <label>WhatsApp Number</label>
+          <label>Phone Number *</label>
           <input type="text" name="whatsapp" required>
           <label>Email Address</label>
           <input type="email" name="email" required>
-          <label>Message</label>
+          <label>Message *</label>
           <textarea name="message" rows="4" placeholder="Tell me what kind of energy or situation you'd like cleared..." required></textarea>
           <button class="submit-btn" type="submit">📩 Submit</button>
         </form>
@@ -377,18 +416,77 @@
         <form name="spiritual-requests" method="POST" data-netlify="true" netlify>
           <input type="hidden" name="form-name" value="spiritual-requests">
           <input type="hidden" name="session_type" value="Fertility & New Beginnings">
-          <label>Full Name</label>
+          <label>Full Name *</label>
           <input type="text" name="name" required>
-          <label>WhatsApp Number</label>
+          <label>Phone Number *</label>
           <input type="text" name="whatsapp" required>
           <label>Email Address</label>
           <input type="email" name="email" required>
-          <label>Message</label>
+          <label>Message *</label>
           <textarea name="message" rows="4" placeholder="Share any relevant details or questions..." required></textarea>
           <button class="submit-btn" type="submit">📩 Submit</button>
         </form>
       </div>
+      
+        <h2 id="booking-heading">🌟 Psychic Reading - $50</h2>
+
+      <!-- FREE READING -->
+      <div class="form-card">
+        <form name="spiritual-requests" method="POST" data-netlify="true" netlify>
+          <input type="hidden" name="form-name" value="spiritual-requests">
+          <input type="hidden" name="session_type" value="Psychic Reading">
+          <label for="name-free">Full Name *</label>
+          <input id="name-free" type="text" name="name" required>
+
+          <label for="whatsapp-free">Phone Number *</label>
+          <input id="whatsapp-free" type="text" name="whatsapp" required>
+
+          <label for="email-free">Email Address</label>
+          <input id="email-free" type="email" name="email" required>
+
+          <label for="message-free">Message *</label>
+          <textarea id="message-free" name="message" rows="5" placeholder="Describe what you want to know or details you'd like me to focus on..." required></textarea>
+
+          <button class="submit-btn" type="submit">📩 Submit</button>
+        </form>
+      </div>
+
+      
+      <div id="consent" class="form-consent">
+  <p><strong>🔔 Please Note:</strong></p>
+  <p>
+    Submitting this <a href="#booking">form</a> does <strong>not</strong> mean that any spiritual work or spell has started.
+    After reviewing your details, I will personally contact you to clearly explain:
+  </p>
+  <ul>
+    <li>Your situation and spiritual needs</li>
+    <li>The type of spiritual work required</li>
+    <li>The cost and expected timeline</li>
+  </ul>
+  <p class="no-payment">
+    <strong>No payment is required until we speak directly.</strong>
+  </p>
+</div>
+      
     </section>
+    
+    <!-- CHAT PROOF -->
+<section id="chat-proof" aria-labelledby="chat-proof-heading">
+  <h2 id="chat-proof-heading">📱 Real Client Conversations</h2>
+  <p class="lead">
+    Screenshots of genuine conversations with clients who received guidance and results.
+  </p>
+
+  <div class="chat-proof-grid">
+    <img src="img/chat-proof-1.jpg" alt="Client chat proof showing spiritual guidance results" loading="lazy">
+    <img src="img/chat-proof-2.jpg" alt="WhatsApp chat proof of satisfied client" loading="lazy">
+    <img src="img/chat-proof-3.jpg" alt="Client testimonial chat screenshot" loading="lazy">
+  </div>
+
+  <p class="chat-proof-note">
+    *Screenshots shared with permission. Personal details are hidden for privacy.*
+  </p>
+</section>
 
     <!-- CONTACT -->
     <section id="contact" aria-labelledby="contact-heading">
