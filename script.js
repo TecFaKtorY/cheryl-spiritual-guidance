@@ -127,7 +127,7 @@ bookingForm.addEventListener("submit", async (e) => {
       throw new Error(result.error || "Send failed");
     }
   } catch (err) {
-    formStatus.textContent = "⚠️ Could not send. Please WhatsApp us at +1 (778) 608 2072.";
+    formStatus.textContent = "⚠️ Could not send. Please send us an sms via +1 (331) 261 9745.";
     formStatus.style.color = "#ff6b6b";
     console.error("Form error:", err);
   } finally {
